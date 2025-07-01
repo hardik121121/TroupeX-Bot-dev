@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TroupeBot - AI Assistant for Entertainers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+        }
+        
+        /* Animated background */
+        .stage-lights {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .spotlight {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            opacity: 0.1;
+            filter: blur(80px);
+            animation: spotlight-move 15s ease-in-out infinite;
+        }
+        
+        .spotlight:nth-child(1) {
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+            top: -150px;
+            left: -150px;
+            animation-delay: 0s;
+        }
+        
+        .spotlight:nth-child(2) {
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
+            bottom: -150px;
+            right: -150px;
+            animation-delay: 5s;
+        }
+        
+        .spotlight:nth-child(3) {
+            background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 10s;
+        }
+        
+        @keyframes spotlight-move {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(100px, 50px) scale(1.2); }
+            50% { transform: translate(-50px, 100px) scale(0.8); }
+            75% { transform: translate(50px, -50px) scale(1.1); }
+        }
+        
+        /* Floating entertainment icons */
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .icon:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .icon:nth-child(2) { left: 80%; top: 30%; animation-delay: 3s; }
+        .icon:nth-child(3) { left: 20%; top: 60%; animation-delay: 6s; }
+        .icon:nth-child(4) { left: 70%; top: 70%; animation-delay: 9s; }
+        .icon:nth-child(5) { left: 50%; top: 10%; animation-delay: 12s; }
+        .icon:nth-child(6) { left: 30%; top: 80%; animation-delay: 15s; }
+        .icon:nth-child(7) { left: 90%; top: 50%; animation-delay: 18s; }
+        .icon:nth-child(8) { left: 60%; top: 40%; animation-delay: 21s; }
+        
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.1;
+            }
+            50% { 
+                transform: translateY(-30px) rotate(180deg);
+                opacity: 0.2;
+            }
+            90% {
+                opacity: 0.1;
+            }
+        }
+        
+        /* Main content */
+        .container {
+            position: relative;
+            z-index: 10;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Logo animation */
+        .logo-container {
+            margin-bottom: 40px;
+            animation: logo-entrance 1s ease-out;
+        }
+        
+        @keyframes logo-entrance {
+            from {
+                opacity: 0;
+                transform: scale(0.5) rotate(-180deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+        
+        .logo {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 30px rgba(255,255,255,0.5));
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 30px rgba(255,255,255,0.5)); }
+            50% { filter: drop-shadow(0 0 50px rgba(255,255,255,0.8)); }
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.5s forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Feature cards */
+        .features {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.7s forwards;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            width: 200px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .feature-desc {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.4;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            background: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.9s forwards;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(0,0,0,0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255,255,255,0.4);
+        }
+        
+        .cta-button span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-button svg {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover svg {
+            transform: translateX(5px);
+        }
+        
+        /* Film strip animation */
+        .film-strip {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 30px
+            );
+            opacity: 0.5;
+            animation: film-roll 10s linear infinite;
+        }
+        
+        @keyframes film-roll {
+            from { transform: translateX(0); }
+            to { transform: translateX(40px); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .features {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .feature-card {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .logo {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated stage lights -->
+    <div class="stage-lights">
+        <div class="spotlight"></div>
+        <div class="spotlight"></div>
+        <div class="spotlight"></div>
+    </div>
+    
+    <!-- Floating entertainment icons -->
+    <div class="floating-icons">
+        <div class="icon">🎬</div>
+        <div class="icon">🎭</div>
+        <div class="icon">🎪</div>
+        <div class="icon">🎨</div>
+        <div class="icon">🎵</div>
+        <div class="icon">🎤</div>
+        <div class="icon">📽️</div>
+        <div class="icon">🎯</div>
+    </div>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">🎬</div>
+            <h1>TroupeBot</h1>
+        </div>
+        
+        <p class="tagline">Your AI-Powered Creative Assistant for Entertainment</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🎭</div>
+                <div class="feature-title">Script Writing</div>
+                <div class="feature-desc">Generate compelling scripts and dialogue</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Creative Ideas</div>
+                <div class="feature-desc">Brainstorm concepts and storylines</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎪</div>
+                <div class="feature-title">Performance Tips</div>
+                <div class="feature-desc">Get expert advice on your craft</div>
+            </div>
+        </div>
+        
+        <a href="/chat" class="cta-button">
+            <span>Get Started</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </a>
+    </div>
+    
+    <!-- Film strip decoration -->
+    <div class="film-strip"></div>
+</body>
+</html>
