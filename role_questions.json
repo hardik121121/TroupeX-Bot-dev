@@ -1,0 +1,1030 @@
+{
+  "cinematographer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What do you go by in the industry? Your screen name or handle?"
+      },
+      {
+        "field": "real_name",
+        "question": "Mind sharing your real name too? Always good to know who I'm chatting with."
+      },
+      {
+        "field": "gear_used",
+        "question": "What's your go-to camera setup? Like, what gear do you usually work with?"
+      },
+      {
+        "field": "visual_style",
+        "question": "How would you describe your visual style? Like, what's your vibe when you're behind the camera?"
+      },
+      {
+        "field": "color_process",
+        "question": "Are you into color grading yourself, or do you prefer to light for the grade?"
+      },
+      {
+        "field": "work_zones",
+        "question": "What kind of projects do you usually work on? Features, shorts, music videos, commercials?"
+      },
+      {
+        "field": "reel_link",
+        "question": "Got a reel or some work online I could check out? Always curious to see people's stuff."
+      },
+      {
+        "field": "language_fluency",
+        "question": "Which languages are you comfortable working in on set?"
+      },
+      {
+        "field": "availability",
+        "question": "You actively taking on new projects right now, or just keeping an eye out?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based? Always helps to know for potential collabs."
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Who are you looking to connect with? Directors, producers, other DPs?"
+      }
+    ]
+  },
+  "actor": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your stage name or the name you use professionally?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name? Just so I know who I'm talking to."
+      },
+      {
+        "field": "acting_style",
+        "question": "How would you describe your acting approach? Method, classical, somewhere in between?"
+      },
+      {
+        "field": "genre_preference",
+        "question": "What genres do you gravitate towards? Drama, comedy, action, experimental?"
+      },
+      {
+        "field": "training_background",
+        "question": "Where'd you train, or are you self-taught? Always interesting to hear people's journeys."
+      },
+      {
+        "field": "work_types",
+        "question": "What kind of projects are you into? Theatre, film, TV, commercials?"
+      },
+      {
+        "field": "reel_link",
+        "question": "Got a reel or clips somewhere? Would love to see your work."
+      },
+      {
+        "field": "language_skills",
+        "question": "What languages can you perform in?"
+      },
+      {
+        "field": "special_skills",
+        "question": "Any special skills? Like accents, stunts, dance, music?"
+      },
+      {
+        "field": "availability",
+        "question": "You auditioning actively right now or being selective?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, casting directors, other actors?"
+      }
+    ]
+  },
+  "editor": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What name do you go by in post circles?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your actual name? Nice to put a real name to the work."
+      },
+      {
+        "field": "software_expertise",
+        "question": "What's your editing setup? Premiere, Avid, DaVinci, Final Cut?"
+      },
+      {
+        "field": "editing_style",
+        "question": "How would you describe your editing style? Fast-paced, contemplative, invisible cuts?"
+      },
+      {
+        "field": "genre_experience",
+        "question": "What kind of content do you usually cut? Narrative, docs, commercials, music videos?"
+      },
+      {
+        "field": "color_audio_skills",
+        "question": "Do you handle color and audio too, or strictly picture editing?"
+      },
+      {
+        "field": "reel_link",
+        "question": "Got a reel or some cuts I could check out?"
+      },
+      {
+        "field": "turnaround_time",
+        "question": "What's your typical turnaround like? Quick cuts or do you like to marinate?"
+      },
+      {
+        "field": "remote_capability",
+        "question": "You set up for remote work, or prefer being in the suite?"
+      },
+      {
+        "field": "availability",
+        "question": "Taking on new projects right now?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based? Or are you fully remote?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, producers, other post folks?"
+      }
+    ]
+  },
+  "writer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your writer name or pen name?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name? Always good to know."
+      },
+      {
+        "field": "writing_genres",
+        "question": "What do you like to write? Drama, comedy, thriller, sci-fi?"
+      },
+      {
+        "field": "format_preference",
+        "question": "Features, TV, shorts, web series? What's your format?"
+      },
+      {
+        "field": "writing_process",
+        "question": "Are you an outliner or do you just dive in and see where it goes?"
+      },
+      {
+        "field": "completed_works",
+        "question": "Got any completed scripts or produced work?"
+      },
+      {
+        "field": "sample_link",
+        "question": "Any samples online, or scripts you're comfortable sharing?"
+      },
+      {
+        "field": "collaboration_style",
+        "question": "You prefer writing solo or do you like writers' rooms and collaboration?"
+      },
+      {
+        "field": "development_stage",
+        "question": "Working on anything specific right now, or between projects?"
+      },
+      {
+        "field": "availability",
+        "question": "Open to new writing gigs or script doctor work?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based? Or does location not matter for your work?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, producers, other writers?"
+      }
+    ]
+  },
+  "director": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your director name or how do you credit yourself?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name? Just to know who I'm talking with."
+      },
+      {
+        "field": "directing_style",
+        "question": "How would you describe your directing approach? Collaborative, auteur, somewhere in between?"
+      },
+      {
+        "field": "genre_focus",
+        "question": "What genres speak to you? What kind of stories do you want to tell?"
+      },
+      {
+        "field": "project_types",
+        "question": "What scale do you usually work at? Shorts, features, commercials, music videos?"
+      },
+      {
+        "field": "visual_approach",
+        "question": "Are you super visual and storyboard everything, or more about finding it on set?"
+      },
+      {
+        "field": "reel_link",
+        "question": "Got a reel or some work I could check out?"
+      },
+      {
+        "field": "upcoming_projects",
+        "question": "Working on anything right now, or in development?"
+      },
+      {
+        "field": "crew_needs",
+        "question": "Usually looking for any specific crew positions? DPs, editors, etc?"
+      },
+      {
+        "field": "availability",
+        "question": "Open to new projects or pretty booked up?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based? Do you travel for projects?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Who are you looking to connect with? Producers, DPs, writers?"
+      }
+    ]
+  },
+  "producer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your professional name in the industry?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name? Good to know who's behind the projects."
+      },
+      {
+        "field": "production_focus",
+        "question": "What kind of producing do you do? Line producing, creative producing, EP?"
+      },
+      {
+        "field": "project_types",
+        "question": "What scale projects do you usually work on? Indies, studio, commercials?"
+      },
+      {
+        "field": "genre_preference",
+        "question": "Any particular genres you gravitate towards?"
+      },
+      {
+        "field": "budget_range",
+        "question": "What budget ranges are you comfortable working with?"
+      },
+      {
+        "field": "recent_projects",
+        "question": "What have you produced recently that you're proud of?"
+      },
+      {
+        "field": "development_slate",
+        "question": "Got anything in development right now?"
+      },
+      {
+        "field": "team_building",
+        "question": "How do you like to build your teams? Through recommendations, past collaborators?"
+      },
+      {
+        "field": "availability",
+        "question": "Looking for new projects to jump on?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based? Do you work locally or travel?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Who are you looking to meet? Directors, writers, other producers?"
+      }
+    ]
+  },
+  "assistant_director": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What name do you use on set? How do people know you?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name? Always nice to know."
+      },
+      {
+        "field": "ad_department",
+        "question": "First AD, Second AD, or do you float between roles?"
+      },
+      {
+        "field": "project_scale",
+        "question": "What scale productions do you usually work on? Indies, commercials, big budget?"
+      },
+      {
+        "field": "scheduling_tools",
+        "question": "What's your go-to for scheduling? Movie Magic, StudioBinder, old school strips?"
+      },
+      {
+        "field": "crew_management",
+        "question": "How would you describe your style with crew? Military precision or more collaborative?"
+      },
+      {
+        "field": "recent_projects",
+        "question": "What have you AD'd recently that you're proud of?"
+      },
+      {
+        "field": "location_experience",
+        "question": "Studio work, location work, or both? Any preference?"
+      },
+      {
+        "field": "availability",
+        "question": "Looking for new projects or pretty booked up?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, producers, other department heads?"
+      }
+    ]
+  },
+  "aspiring_filmmaker": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What name are you going by? Building your brand?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "focus_area",
+        "question": "What aspect of filmmaking draws you most? Directing, producing, writing?"
+      },
+      {
+        "field": "experience_level",
+        "question": "Where are you at in your journey? Film school, self-taught, first few projects?"
+      },
+      {
+        "field": "current_projects",
+        "question": "Working on anything right now? Short film, web series, feature script?"
+      },
+      {
+        "field": "inspirations",
+        "question": "What kind of stories do you want to tell?"
+      },
+      {
+        "field": "skills_learning",
+        "question": "What are you focusing on learning right now?"
+      },
+      {
+        "field": "portfolio_link",
+        "question": "Got any work online, even if it's early stuff?"
+      },
+      {
+        "field": "availability",
+        "question": "Looking to collaborate on projects or focused on your own stuff?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Who would you love to work with or learn from?"
+      }
+    ]
+  },
+  "sound_designer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your professional name in post circles?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "sound_specialties",
+        "question": "What's your thing? Foley, ADR, mixing, field recording, all of it?"
+      },
+      {
+        "field": "software_tools",
+        "question": "Pro Tools, Logic, Reaper? What's your setup?"
+      },
+      {
+        "field": "project_types",
+        "question": "Features, docs, games, commercials? What do you usually work on?"
+      },
+      {
+        "field": "studio_setup",
+        "question": "Got your own studio or do you work at facilities?"
+      },
+      {
+        "field": "reel_link",
+        "question": "Got a reel where I can hear your work?"
+      },
+      {
+        "field": "turnaround_time",
+        "question": "How do you typically work? Quick turnarounds or prefer time to craft?"
+      },
+      {
+        "field": "availability",
+        "question": "Taking on new projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based? Remote capable?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, editors, other post folks?"
+      }
+    ]
+  },
+  "production_designer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your name in the art department world?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "design_style",
+        "question": "How would you describe your design aesthetic?"
+      },
+      {
+        "field": "project_scale",
+        "question": "What scale do you usually work at? Indies, commercials, features?"
+      },
+      {
+        "field": "period_experience",
+        "question": "Contemporary stuff or do you do period work too?"
+      },
+      {
+        "field": "build_vs_location",
+        "question": "Prefer building sets or transforming locations?"
+      },
+      {
+        "field": "portfolio_link",
+        "question": "Got a portfolio or some work I could check out?"
+      },
+      {
+        "field": "team_size",
+        "question": "Used to working with big art departments or smaller teams?"
+      },
+      {
+        "field": "availability",
+        "question": "Open for new projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, DPs, other designers?"
+      }
+    ]
+  },
+  "composer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your composer name?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "musical_style",
+        "question": "What's your musical voice? Orchestral, electronic, hybrid?"
+      },
+      {
+        "field": "instruments",
+        "question": "What do you play? Or are you all in-the-box?"
+      },
+      {
+        "field": "project_types",
+        "question": "Features, shorts, games, commercials? What's your usual?"
+      },
+      {
+        "field": "studio_setup",
+        "question": "Home studio or do you work at bigger facilities?"
+      },
+      {
+        "field": "reel_link",
+        "question": "Got a reel or some scores I could listen to?"
+      },
+      {
+        "field": "collaboration_style",
+        "question": "How do you like to work with directors? Temp tracks, spotting sessions?"
+      },
+      {
+        "field": "availability",
+        "question": "Taking on new scoring projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, music supervisors, other composers?"
+      }
+    ]
+  },
+  "colorist": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your name in the color world?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "software_preference",
+        "question": "DaVinci Resolve, Baselight, or something else?"
+      },
+      {
+        "field": "grading_style",
+        "question": "How would you describe your approach to color? Natural, stylized, depends on the project?"
+      },
+      {
+        "field": "project_types",
+        "question": "What do you usually grade? Features, commercials, music videos?"
+      },
+      {
+        "field": "suite_setup",
+        "question": "Got your own suite or work at facilities?"
+      },
+      {
+        "field": "reel_link",
+        "question": "Got a reel showing your color work?"
+      },
+      {
+        "field": "workflow_preference",
+        "question": "Remote grading capable or prefer in-person sessions?"
+      },
+      {
+        "field": "availability",
+        "question": "Open for new grading projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with DPs, directors, other post folks?"
+      }
+    ]
+  },
+  "vfx_artist": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your name in the VFX world?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "vfx_specialty",
+        "question": "What's your specialty? Compositing, 3D, matte painting, FX simulation?"
+      },
+      {
+        "field": "software_tools",
+        "question": "Nuke, After Effects, Houdini, Maya? What's your toolkit?"
+      },
+      {
+        "field": "project_scale",
+        "question": "Boutique stuff or big tentpole VFX? What's your usual?"
+      },
+      {
+        "field": "team_preference",
+        "question": "Like working solo or prefer being part of a bigger VFX team?"
+      },
+      {
+        "field": "reel_link",
+        "question": "Got a reel or some shots you've worked on?"
+      },
+      {
+        "field": "turnaround_capability",
+        "question": "Quick turnarounds or prefer having time to polish?"
+      },
+      {
+        "field": "availability",
+        "question": "Taking on new VFX projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based? Remote friendly?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, VFX supes, other artists?"
+      }
+    ]
+  },
+  "casting_director": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your casting name?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "casting_specialty",
+        "question": "What kind of casting do you do? Leads, background, voice, all of it?"
+      },
+      {
+        "field": "project_types",
+        "question": "Features, TV, commercials, theater? What's your focus?"
+      },
+      {
+        "field": "talent_network",
+        "question": "Work with agencies mainly or do you street cast too?"
+      },
+      {
+        "field": "casting_approach",
+        "question": "Traditional auditions, self-tapes, chemistry reads? How do you like to work?"
+      },
+      {
+        "field": "recent_projects",
+        "question": "What have you cast recently that you're proud of?"
+      },
+      {
+        "field": "location_reach",
+        "question": "Local casting or do you cast wider regions?"
+      },
+      {
+        "field": "availability",
+        "question": "Taking on new casting projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, producers, other casting folks?"
+      }
+    ]
+  },
+  "gaffer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What do people call you on set?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "lighting_style",
+        "question": "What's your approach to lighting? Naturalistic, dramatic, whatever serves the story?"
+      },
+      {
+        "field": "gear_preference",
+        "question": "LED person or still love tungsten? What's in your truck?"
+      },
+      {
+        "field": "crew_size",
+        "question": "Used to working with big electric departments or smaller crews?"
+      },
+      {
+        "field": "project_types",
+        "question": "What kind of shoots? Features, commercials, music videos?"
+      },
+      {
+        "field": "power_expertise",
+        "question": "Comfortable with big power tie-ins or mostly house power stuff?"
+      },
+      {
+        "field": "dp_relationships",
+        "question": "Got DPs you regularly work with?"
+      },
+      {
+        "field": "availability",
+        "question": "Available for new projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with DPs, producers, other department heads?"
+      }
+    ]
+  },
+  "location_manager": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your name in the locations world?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "location_specialty",
+        "question": "What kind of locations are your specialty? Urban, rural, period, modern?"
+      },
+      {
+        "field": "scouting_area",
+        "question": "What areas do you know like the back of your hand?"
+      },
+      {
+        "field": "permit_experience",
+        "question": "Comfortable with complex permits? Government buildings, public spaces?"
+      },
+      {
+        "field": "project_scale",
+        "question": "Indies with skeleton crews or big productions with lots of trucks?"
+      },
+      {
+        "field": "problem_solving",
+        "question": "What's the trickiest location challenge you've solved?"
+      },
+      {
+        "field": "database_resources",
+        "question": "Got a good database of locations or know how to find anything?"
+      },
+      {
+        "field": "availability",
+        "question": "Available for location scouting/management?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with producers, directors, other location folks?"
+      }
+    ]
+  },
+  "script_supervisor": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your name on set?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "continuity_approach",
+        "question": "Old school paper and polaroids or all digital now?"
+      },
+      {
+        "field": "software_tools",
+        "question": "ScriptE, Scriptation, or something else?"
+      },
+      {
+        "field": "project_types",
+        "question": "Features, TV, commercials? Multi-cam or single cam?"
+      },
+      {
+        "field": "detail_level",
+        "question": "Super detailed notes or just the essentials?"
+      },
+      {
+        "field": "editor_relationship",
+        "question": "How do you like to work with editors? Daily reports, detailed notes?"
+      },
+      {
+        "field": "challenging_continuity",
+        "question": "What's the most complex continuity you've managed?"
+      },
+      {
+        "field": "availability",
+        "question": "Available for scripty work?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, ADs, editors?"
+      }
+    ]
+  },
+  "makeup_artist": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your professional name?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "makeup_specialty",
+        "question": "Beauty, SFX, prosthetics, or all of the above?"
+      },
+      {
+        "field": "style_range",
+        "question": "Natural looks, glam, period, fantasy? What's your range?"
+      },
+      {
+        "field": "project_types",
+        "question": "Film, TV, commercials, fashion? What's your usual?"
+      },
+      {
+        "field": "kit_level",
+        "question": "Full kit ready to go? Department head level or team member?"
+      },
+      {
+        "field": "portfolio_link",
+        "question": "Got a portfolio showing your work?"
+      },
+      {
+        "field": "continuity_skills",
+        "question": "Good with continuity? Matching looks across days?"
+      },
+      {
+        "field": "availability",
+        "question": "Taking on new projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, DPs, other department heads?"
+      }
+    ]
+  },
+  "costume_designer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your name in the costume world?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "design_aesthetic",
+        "question": "How would you describe your costume design style?"
+      },
+      {
+        "field": "period_expertise",
+        "question": "Contemporary, period, fantasy? What's your wheelhouse?"
+      },
+      {
+        "field": "build_vs_source",
+        "question": "Build from scratch or amazing at sourcing?"
+      },
+      {
+        "field": "project_scale",
+        "question": "Indies with small budgets or bigger productions?"
+      },
+      {
+        "field": "portfolio_link",
+        "question": "Got a portfolio or lookbooks to share?"
+      },
+      {
+        "field": "team_management",
+        "question": "Work solo or manage costume departments?"
+      },
+      {
+        "field": "availability",
+        "question": "Open for new costume design projects?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with directors, production designers, other costumers?"
+      }
+    ]
+  },
+  "line_producer": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What's your professional name?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "budget_range",
+        "question": "What budget ranges are you comfortable managing?"
+      },
+      {
+        "field": "project_types",
+        "question": "Features, TV, commercials? What's your specialty?"
+      },
+      {
+        "field": "software_tools",
+        "question": "Movie Magic, Gorilla, Excel warrior? What's your budgeting tool?"
+      },
+      {
+        "field": "union_experience",
+        "question": "Union shows, non-union, or both?"
+      },
+      {
+        "field": "problem_solving",
+        "question": "What's the toughest production challenge you've solved?"
+      },
+      {
+        "field": "crew_relationships",
+        "question": "Got go-to department heads you like to work with?"
+      },
+      {
+        "field": "availability",
+        "question": "Available for line producing?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with producers, directors, other production folks?"
+      }
+    ]
+  },
+  "grip": {
+    "questions": [
+      {
+        "field": "screen_name",
+        "question": "What do people call you on set?"
+      },
+      {
+        "field": "real_name",
+        "question": "And your real name?"
+      },
+      {
+        "field": "grip_specialty",
+        "question": "Key grip, dolly grip, or best boy? What's your role?"
+      },
+      {
+        "field": "rigging_expertise",
+        "question": "Complex rigs your thing or more run-and-gun style?"
+      },
+      {
+        "field": "equipment_knowledge",
+        "question": "What gear are you most comfortable with? Dollies, cranes, car rigs?"
+      },
+      {
+        "field": "project_types",
+        "question": "What kind of productions? Features, commercials, music videos?"
+      },
+      {
+        "field": "safety_focus",
+        "question": "How do you approach set safety?"
+      },
+      {
+        "field": "crew_relationships",
+        "question": "Got gaffers or DPs you regularly work with?"
+      },
+      {
+        "field": "availability",
+        "question": "Available for grip work?"
+      },
+      {
+        "field": "location",
+        "question": "Where are you based?"
+      },
+      {
+        "field": "collaboration_targets",
+        "question": "Looking to connect with DPs, gaffers, other grips?"
+      }
+    ]
+  }
+}

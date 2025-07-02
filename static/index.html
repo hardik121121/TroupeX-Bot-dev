@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TroupeBot - AI Assistant for Entertainers</title>
+    <title>TroupeX - Where Creative Talent Meets Opportunity</title>
     <style>
         * {
             margin: 0;
@@ -11,161 +11,162 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary-white: #ffffff;
+            --primary-black: #000000;
+            --gray-100: rgba(255,255,255,0.95);
+            --gray-200: rgba(255,255,255,0.8);
+            --gray-300: rgba(255,255,255,0.6);
+            --gray-400: rgba(255,255,255,0.4);
+            --gray-500: rgba(255,255,255,0.2);
+            --gray-600: rgba(255,255,255,0.1);
+            --gray-700: rgba(255,255,255,0.05);
+            --gray-800: rgba(255,255,255,0.03);
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #000000;
-            color: #ffffff;
-            overflow: hidden;
-            position: relative;
-            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            background: var(--primary-black);
+            color: var(--primary-white);
+            overflow-x: hidden;
+            line-height: 1.6;
         }
         
-        /* Animated background */
-        .stage-lights {
-            position: absolute;
+        /* Professional gradient background */
+        .background-gradient {
+            position: fixed;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.02) 0%, transparent 50%),
+                radial-gradient(circle at 50% 20%, rgba(255,255,255,0.02) 0%, transparent 50%);
+        }
+        
+        /* Animated network connections */
+        .network-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
             z-index: 1;
+            opacity: 0.03;
         }
         
-        .spotlight {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            opacity: 0.1;
-            filter: blur(80px);
-            animation: spotlight-move 15s ease-in-out infinite;
-        }
-        
-        .spotlight:nth-child(1) {
-            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
-            top: -150px;
-            left: -150px;
-            animation-delay: 0s;
-        }
-        
-        .spotlight:nth-child(2) {
-            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
-            bottom: -150px;
-            right: -150px;
-            animation-delay: 5s;
-        }
-        
-        .spotlight:nth-child(3) {
-            background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: 10s;
-        }
-        
-        @keyframes spotlight-move {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(100px, 50px) scale(1.2); }
-            50% { transform: translate(-50px, 100px) scale(0.8); }
-            75% { transform: translate(50px, -50px) scale(1.1); }
-        }
-        
-        /* Floating entertainment icons */
-        .floating-icons {
+        .network-bg::before {
+            content: '';
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: 2;
+            background-image: 
+                repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(255,255,255,0.1) 100px, rgba(255,255,255,0.1) 101px),
+                repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(255,255,255,0.1) 100px, rgba(255,255,255,0.1) 101px);
+            animation: network-move 50s linear infinite;
         }
         
-        .icon {
-            position: absolute;
-            font-size: 2rem;
-            opacity: 0.1;
-            animation: float 20s infinite ease-in-out;
+        @keyframes network-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 100px); }
         }
         
-        .icon:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-        .icon:nth-child(2) { left: 80%; top: 30%; animation-delay: 3s; }
-        .icon:nth-child(3) { left: 20%; top: 60%; animation-delay: 6s; }
-        .icon:nth-child(4) { left: 70%; top: 70%; animation-delay: 9s; }
-        .icon:nth-child(5) { left: 50%; top: 10%; animation-delay: 12s; }
-        .icon:nth-child(6) { left: 30%; top: 80%; animation-delay: 15s; }
-        .icon:nth-child(7) { left: 90%; top: 50%; animation-delay: 18s; }
-        .icon:nth-child(8) { left: 60%; top: 40%; animation-delay: 21s; }
-        
-        @keyframes float {
-            0%, 100% { 
-                transform: translateY(0) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.1;
-            }
-            50% { 
-                transform: translateY(-30px) rotate(180deg);
-                opacity: 0.2;
-            }
-            90% {
-                opacity: 0.1;
-            }
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-600);
         }
         
-        /* Main content */
-        .container {
-            position: relative;
-            z-index: 10;
-            height: 100vh;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 40px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        /* Logo animation */
-        .logo-container {
-            margin-bottom: 40px;
-            animation: logo-entrance 1s ease-out;
-        }
-        
-        @keyframes logo-entrance {
-            from {
-                opacity: 0;
-                transform: scale(0.5) rotate(-180deg);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) rotate(0deg);
-            }
         }
         
         .logo {
-            font-size: 5rem;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 30px rgba(255,255,255,0.5));
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { filter: drop-shadow(0 0 30px rgba(255,255,255,0.5)); }
-            50% { filter: drop-shadow(0 0 50px rgba(255,255,255,0.8)); }
-        }
-        
-        h1 {
-            font-size: 3rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.3s forwards;
+            letter-spacing: -0.5px;
         }
         
-        .tagline {
-            font-size: 1.3rem;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 60px;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.5s forwards;
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--gray-200);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-white);
+        }
+        
+        .chat-btn {
+            background: var(--primary-white);
+            color: var(--primary-black);
+            padding: 10px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .chat-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255,255,255,0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 40px 80px;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.4rem;
+            color: var(--gray-200);
+            margin-bottom: 40px;
+            line-height: 1.5;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
         }
         
         @keyframes fadeInUp {
@@ -179,67 +180,258 @@
             }
         }
         
-        /* Feature cards */
-        .features {
+        /* Stats */
+        .stats {
             display: flex;
-            gap: 30px;
-            margin-bottom: 60px;
-            flex-wrap: wrap;
-            justify-content: center;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.7s forwards;
+            gap: 40px;
+            margin-top: 50px;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
         }
         
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 24px;
-            width: 200px;
-            transition: all 0.3s ease;
+        .stat {
+            text-align: center;
         }
         
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.2);
-        }
-        
-        .feature-icon {
+        .stat-number {
             font-size: 2.5rem;
-            margin-bottom: 12px;
-        }
-        
-        .feature-title {
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
+            display: block;
             margin-bottom: 8px;
         }
         
-        .feature-desc {
+        .stat-label {
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-            line-height: 1.4;
+            color: var(--gray-300);
         }
         
-        /* CTA Button */
+        /* Hero visual */
+        .hero-visual {
+            position: relative;
+            animation: fadeIn 1s ease-out 0.6s backwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .network-sphere {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        .orbit {
+            position: absolute;
+            border: 1px solid var(--gray-600);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .orbit:nth-child(1) { width: 100%; height: 100%; }
+        .orbit:nth-child(2) { width: 75%; height: 75%; }
+        .orbit:nth-child(3) { width: 50%; height: 50%; }
+        
+        .node {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-white);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255,255,255,0.8);
+        }
+        
+        .node:nth-child(4) { top: 0; left: 50%; transform: translateX(-50%); }
+        .node:nth-child(5) { bottom: 0; left: 50%; transform: translateX(-50%); }
+        .node:nth-child(6) { left: 0; top: 50%; transform: translateY(-50%); }
+        .node:nth-child(7) { right: 0; top: 50%; transform: translateY(-50%); }
+        .node:nth-child(8) { top: 15%; right: 15%; }
+        .node:nth-child(9) { bottom: 15%; left: 15%; }
+        .node:nth-child(10) { top: 15%; left: 15%; }
+        .node:nth-child(11) { bottom: 15%; right: 15%; }
+        
+        .center-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: var(--primary-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 0 40px rgba(255,255,255,0.6);
+        }
+        
+        /* Industry Segments */
+        .segments {
+            position: relative;
+            z-index: 10;
+            padding: 100px 40px;
+            background: var(--gray-800);
+            border-top: 1px solid var(--gray-600);
+            border-bottom: 1px solid var(--gray-600);
+        }
+        
+        .segments-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .segments h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .segments-subtitle {
+            text-align: center;
+            color: var(--gray-300);
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+        }
+        
+        .segments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .segment-card {
+            background: var(--gray-700);
+            border: 1px solid var(--gray-600);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .segment-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gray-400);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+        }
+        
+        .segment-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .segment-name {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        /* Value Props */
+        .value-props {
+            position: relative;
+            z-index: 10;
+            padding: 100px 40px;
+        }
+        
+        .value-props-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .value-props h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+        
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .prop-card {
+            background: var(--gray-800);
+            border: 1px solid var(--gray-600);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .prop-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gray-400);
+            box-shadow: 0 20px 40px rgba(255,255,255,0.1);
+        }
+        
+        .prop-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gray-700);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+        
+        .prop-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .prop-desc {
+            color: var(--gray-200);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            position: relative;
+            z-index: 10;
+            padding: 100px 40px;
+            text-align: center;
+            background: var(--gray-800);
+            border-top: 1px solid var(--gray-600);
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-200);
+            margin-bottom: 40px;
+        }
+        
         .cta-button {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            padding: 18px 40px;
+            background: var(--primary-white);
+            color: var(--primary-black);
+            padding: 16px 40px;
             font-size: 1.1rem;
-            font-weight: 600;
-            color: #000;
-            background: #fff;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
+            font-weight: 700;
+            border-radius: 30px;
             text-decoration: none;
             transition: all 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.9s forwards;
             position: relative;
             overflow: hidden;
         }
@@ -258,8 +450,8 @@
         }
         
         .cta-button:hover::before {
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
         }
         
         .cta-button:hover {
@@ -272,125 +464,279 @@
             z-index: 1;
         }
         
-        .cta-button svg {
-            width: 20px;
-            height: 20px;
-            position: relative;
-            z-index: 1;
-            transition: transform 0.3s ease;
-        }
-        
-        .cta-button:hover svg {
-            transform: translateX(5px);
-        }
-        
-        /* Film strip animation */
-        .film-strip {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background: repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 10px,
-                rgba(255,255,255,0.05) 10px,
-                rgba(255,255,255,0.05) 30px
-            );
-            opacity: 0.5;
-            animation: film-roll 10s linear infinite;
-        }
-        
-        @keyframes film-roll {
-            from { transform: translateX(0); }
-            to { transform: translateX(40px); }
-        }
-        
         /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 60px;
             }
             
-            .tagline {
-                font-size: 1.1rem;
+            .hero-text h1 {
+                font-size: 2.8rem;
             }
             
-            .features {
-                flex-direction: column;
-                gap: 20px;
+            .stats {
+                justify-content: center;
             }
             
-            .feature-card {
-                width: 100%;
-                max-width: 300px;
+            .network-sphere {
+                width: 300px;
+                height: 300px;
             }
             
-            .logo {
-                font-size: 4rem;
+            .nav-links {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .segments-grid, .props-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .prop-card {
+                padding: 30px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Animated stage lights -->
-    <div class="stage-lights">
-        <div class="spotlight"></div>
-        <div class="spotlight"></div>
-        <div class="spotlight"></div>
-    </div>
+    <!-- Background effects -->
+    <div class="background-gradient"></div>
+    <div class="network-bg"></div>
     
-    <!-- Floating entertainment icons -->
-    <div class="floating-icons">
-        <div class="icon">🎬</div>
-        <div class="icon">🎭</div>
-        <div class="icon">🎪</div>
-        <div class="icon">🎨</div>
-        <div class="icon">🎵</div>
-        <div class="icon">🎤</div>
-        <div class="icon">📽️</div>
-        <div class="icon">🎯</div>
-    </div>
-    
-    <!-- Main content -->
-    <div class="container">
-        <div class="logo-container">
-            <div class="logo">🎬</div>
-            <h1>TroupeBot</h1>
-        </div>
-        
-        <p class="tagline">Your AI-Powered Creative Assistant for Entertainment</p>
-        
-        <div class="features">
-            <div class="feature-card">
-                <div class="feature-icon">🎭</div>
-                <div class="feature-title">Script Writing</div>
-                <div class="feature-desc">Generate compelling scripts and dialogue</div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🎨</div>
-                <div class="feature-title">Creative Ideas</div>
-                <div class="feature-desc">Brainstorm concepts and storylines</div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🎪</div>
-                <div class="feature-title">Performance Tips</div>
-                <div class="feature-desc">Get expert advice on your craft</div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">TroupeX</div>
+            <div class="nav-links">
+                <a href="#segments" class="nav-link">Industries</a>
+                <a href="#value" class="nav-link">Why TroupeX</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="/chat" class="chat-btn">Meet TroupeBot</a>
             </div>
         </div>
-        
-        <a href="/chat" class="cta-button">
-            <span>Get Started</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-        </a>
-    </div>
+    </nav>
     
-    <!-- Film strip decoration -->
-    <div class="film-strip"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Where Creative Talent Meets Opportunity</h1>
+                <p class="subtitle">The first true end-to-end platform for project-based professionals in Media & Entertainment. No gatekeepers. Direct access. Your craft, professionalized.</p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">28L+</span>
+                        <span class="stat-label">Creative Professionals</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Organizations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">90%</span>
+                        <span class="stat-label">Untapped Potential</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="network-sphere">
+                    <div class="orbit"></div>
+                    <div class="orbit"></div>
+                    <div class="orbit"></div>
+                    <div class="node"></div>
+                    <div class="node"></div>
+                    <div class="node"></div>
+                    <div class="node"></div>
+                    <div class="node"></div>
+                    <div class="node"></div>
+                    <div class="node"></div>
+                    <div class="node"></div>
+                    <div class="center-node">🎬</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industry Segments -->
+    <section class="segments" id="segments">
+        <div class="segments-container">
+            <h2>Connecting Every Corner of Entertainment</h2>
+            <p class="segments-subtitle">A two-sided platform for individuals and organizations across all creative industries</p>
+            
+            <div class="segments-grid">
+                <div class="segment-card">
+                    <span class="segment-icon">🎬</span>
+                    <div class="segment-name">Film & Cinema</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">📺</span>
+                    <div class="segment-name">TV Production</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">📱</span>
+                    <div class="segment-name">OTT & Streaming</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">🎙️</span>
+                    <div class="segment-name">Radio & Audio</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">📰</span>
+                    <div class="segment-name">Print Media</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">💻</span>
+                    <div class="segment-name">Digital Media</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">🎵</span>
+                    <div class="segment-name">Music Industry</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">🎭</span>
+                    <div class="segment-name">Performing Arts</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">📢</span>
+                    <div class="segment-name">Advertising</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">🎨</span>
+                    <div class="segment-name">Animation & VFX</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">🎮</span>
+                    <div class="segment-name">Gaming & Esports</div>
+                </div>
+                <div class="segment-card">
+                    <span class="segment-icon">🎪</span>
+                    <div class="segment-name">Events & Shows</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Value Propositions -->
+    <section class="value-props" id="value">
+        <div class="value-props-container">
+            <h2>Why TroupeX Changes Everything</h2>
+            
+            <div class="props-grid">
+                <div class="prop-card">
+                    <div class="prop-icon">🚀</div>
+                    <h3 class="prop-title">End-to-End Solution</h3>
+                    <p class="prop-desc">The first platform bridging the gap between full-time job boards and freelance marketplaces. Built specifically for project-based creative work.</p>
+                </div>
+                
+                <div class="prop-card">
+                    <div class="prop-icon">🎯</div>
+                    <h3 class="prop-title">Direct Access</h3>
+                    <p class="prop-desc">No gatekeepers. No middlemen. Connect directly with talent and opportunities. Your network, your control, your success.</p>
+                </div>
+                
+                <div class="prop-card">
+                    <div class="prop-icon">🏆</div>
+                    <h3 class="prop-title">Professionalize Your Craft</h3>
+                    <p class="prop-desc">Every role is valued and structured. From spot boys to directors, institutionalizing creative careers like never before.</p>
+                </div>
+                
+                <div class="prop-card">
+                    <div class="prop-icon">📈</div>
+                    <h3 class="prop-title">10X Success Rate</h3>
+                    <p class="prop-desc">Current industry fills only 5-10% of roles effectively. TroupeX unlocks the remaining 90% with smart matching and expanded talent pools.</p>
+                </div>
+                
+                <div class="prop-card">
+                    <div class="prop-icon">🤖</div>
+                    <h3 class="prop-title">AI-Enhanced, Not Replaced</h3>
+                    <p class="prop-desc">Future-proof your career with tools that enhance your creativity. Showcase verified portfolios and let AI amplify, not replace your talent.</p>
+                </div>
+                
+                <div class="prop-card">
+                    <div class="prop-icon">🌟</div>
+                    <h3 class="prop-title">Your Story, Your Way</h3>
+                    <p class="prop-desc">No more "struggling artist" narrative. Build your professional brand, showcase your work, and write your own success story.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Transform Your Creative Career?</h2>
+            <p class="cta-subtitle">Meet TroupeBot - your AI assistant to build your professional profile and connect with opportunities</p>
+            
+            <a href="/chat" class="cta-button">
+                <span>Start Building Your Profile</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animate nodes in the network sphere
+        const nodes = document.querySelectorAll('.node');
+        nodes.forEach((node, index) => {
+            node.style.animation = `pulse 2s ease-in-out ${index * 0.2}s infinite`;
+        });
+        
+        // Add pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); opacity: 0.8; }
+                50% { transform: scale(1.2); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards
+        document.querySelectorAll('.segment-card, .prop-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
